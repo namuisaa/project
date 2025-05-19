@@ -1,0 +1,342 @@
+* {
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    background-image: url("parliament.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.tandm{
+    display: none;
+}
+
+/* for desktop response */
+@media screen and (min-width: 1025px) {
+    .container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: grid;
+        width: 100vw;
+        grid-template-areas: 'c m m m n'
+            'mid mid mid mid mid';
+    }
+    .desk{
+        display: none;
+    }
+    .tandm{
+        display: block;
+    }
+    .op-b {
+        background-color: black;
+        height: 100vh;
+        opacity: 0.8;
+    }
+
+    .c {
+        grid-area: c;
+    }
+
+    .h1 {
+        padding: 5px;
+        margin-top: 20px;
+        margin-left: 50px;
+    }
+
+    h1 :hover {
+        color: rgb(180, 180, 180);
+        transition: .5s;
+    }
+
+    h1>a {
+        text-decoration: none;
+    }
+
+    .n {
+        grid-area: n;
+        /* width: 20%; */
+    }
+
+    ul {
+        display: inline-flex;
+        list-style: none;
+        margin-right: 50px;
+    }
+
+    li>a {
+        text-decoration: none;
+        color: white;
+        margin-left: 30px;
+        padding-left: 5px;
+    }
+
+    li :hover {
+        color: rgb(180, 180, 180);
+        transition: .5s;
+
+    }
+
+    .m {
+        grid-area: m;
+    }
+
+    .l {
+        grid-area: l;
+    }
+
+    .r {
+        grid-area: r;
+    }
+
+    .d {
+        grid-area: d;
+        padding-top: 20vh;
+    }
+
+    .mid {
+        margin: 0 80 0 80;
+        display: grid;
+        grid-area: mid;
+        margin: 0 20vw 0 20vw;
+        grid-template-areas: 'l d r';
+    }
+
+    button>a {
+        text-decoration: none;
+        color: black;
+    }
+
+    button {
+        padding: 10px 15px 10px 15px;
+        /*top left bottom right*/
+        border-radius: 3px;
+        border: none;
+    }
+
+    button :hover {
+        font-weight: 600;
+        transition: .3s;
+    }
+}
+
+/* for tablet response */
+@media screen and (min-width: 540px) and (max-width: 1025px) {
+    .container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: grid;
+        width: 100vw;
+        grid-template-areas: 'c n'
+            'mid mid';
+    }
+
+    .op-b {
+        background-color: black;
+        height: 100vh;
+        opacity: 0.8;
+    }
+
+    .c {
+        grid-area: c;
+    }
+
+    .h1 {
+        padding: 5px;
+        margin-top: 20px;
+        margin-left: 0px;
+    }
+
+    h1 :hover {
+        color: rgb(180, 180, 180);
+        transition: .5s;
+    }
+
+    h1>a {
+        text-decoration: none;
+    }
+
+    .n {
+        grid-area: n;
+        /* width: 20%; */
+    }
+
+    ul {
+        display: inline-flex;
+        list-style: none;
+        margin-right: 0px;
+    }
+
+    li>a {
+        text-decoration: none;
+        color: white;
+        margin-left: 30px;
+        padding-left: 5px;
+    }
+
+    li :hover {
+        color: rgb(180, 180, 180);
+        transition: .5s;
+
+    }
+
+    .m {
+        grid-area: m;
+    }
+
+    .l {
+        grid-area: l;
+    }
+
+    .r {
+        grid-area: r;
+    }
+
+    .d {
+        grid-area: d;
+        padding-top: 20vh;
+    }
+
+    .mid {
+        margin: 0 80 0 80;
+        display: grid;
+        grid-area: mid;
+        grid-template-areas: 'l d r';
+    }
+
+    button>a {
+        text-decoration: none;
+        color: black;
+    }
+
+    button {
+        padding: 10px 15px 10px 15px;
+        /*top left bottom right*/
+        border-radius: 3px;
+        border: none;
+    }
+
+    button :hover {
+        font-weight: 600;
+        transition: .3s;
+    }
+}
+
+/* for mobiles */
+@media screen and (max-width: 540px) {
+
+    body {
+        background-image: url("parliament.jpg");
+        background-size: cover;
+        width: 100vh;
+    }
+
+    .container {
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: grid;
+        width: 100vw;
+        grid-template-areas: 'c'
+        'n'
+        'mid';
+    }
+
+    .op-b {
+        background-color: black;
+        height: 100vh;
+        opacity: 0.8;
+    }
+
+    .c {
+        grid-area: c;
+    }
+
+    .h1 {
+        padding: 5px;
+        font-size: 15px;
+        margin-top: 20px;
+    }
+
+    h1 :hover {
+        color: rgb(180, 180, 180);
+        transition: .5s;
+    }
+
+    h1>a {
+        text-decoration: none;
+    }
+
+    .n {
+        grid-area: n;
+    }
+
+    ul {
+        display: inline-flex;
+        list-style: none;
+        margin-right: 50px;
+    }
+
+    li>a {
+        text-decoration: none;
+        color: white;
+        margin-left: 30px;
+        padding-left: 5px;
+    }
+
+    li :hover {
+        color: rgb(180, 180, 180);
+        transition: .5s;
+
+    }
+
+    .m {
+        grid-area: m;
+        display: none;
+    }
+
+    .l {
+        grid-area: l;
+    }
+
+    .r {
+        grid-area: r;
+    }
+
+    .d {
+        grid-area: d;
+        padding-top: 150px;
+    }
+
+    .mid {
+        margin: 0 80 0 80;
+        display: grid;
+        grid-area: mid;
+        grid-template-areas: 'l d r';
+    }
+
+    button>a {
+        text-decoration: none;
+        color: black;
+    }
+
+    button {
+        padding: 10px 15px 10px 15px;
+        /*top left bottom right*/
+        border-radius: 3px;
+        border: none;
+    }
+
+    button :hover {
+        font-weight: 600;
+        transition: .3s;
+    }
+}

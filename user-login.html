@@ -1,0 +1,214 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login - Online Crime Report in Nepal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* for desktop response */
+@media screen and (min-width: 1025px) {
+        .container{
+            margin: auto;
+            margin-top: 25vh;
+            width: 25vw;
+            border: 1px solid rgb(189, 189, 189);
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+        }
+        .perror{
+            color:red;
+        }
+        .h1form{
+            margin-top: 25px;
+        }
+        .h1form a {
+            text-decoration:none;
+            color: rgb(32,32,32);
+        }
+        .h1form a:hover{
+            color: rgb(100,100,100);
+        }
+        .pform{
+            margin:10px 0 10px 0;
+            font-size: 20px;
+        }
+        form{
+            margin-top:25px;
+            margin-bottom: 25px;
+        }
+        input{
+            font-size:15px;
+            padding:10 15 10 15;
+            width:80%;
+        }
+        input:focus{
+            outline: none;
+            box-shadow: none;
+        }
+        button{
+            font-size:17px;
+            width:80%;
+            color: white;
+            border:none;
+            border-radius:3px;
+            padding: 10 15 10 15;
+            background-color:rgb(57, 164, 252);
+        }
+        button:hover{
+            cursor: pointer;
+            transition: 0.5s;
+            background-color:rgb(57, 135, 252);
+        }
+        .pbottom{
+            margin-top:5px;
+        }
+    }
+
+    /* for tablet response */
+@media screen and (min-width: 540px) and (max-width: 1255px) {
+        .container{
+            margin: auto;
+            margin-top: 25vh;
+            width: 50vw;
+            border: 1px solid rgb(189, 189, 189);
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+        }
+        .perror{
+            color:red;
+        }
+        .h1form{
+            margin-top: 25px;
+        }
+        .h1form a {
+            text-decoration:none;
+            color: rgb(32,32,32);
+        }
+        .h1form a:hover{
+            color: rgb(100,100,100);
+        }
+        .pform{
+            margin:10px 0 10px 0;
+            font-size: 20px;
+        }
+        form{
+            margin-top:25px;
+            margin-bottom: 25px;
+        }
+        input{
+            font-size:15px;
+            padding:10 15 10 15;
+            width:80%;
+        }
+        input:focus{
+            outline: none;
+            box-shadow: none;
+        }
+        button{
+            font-size:17px;
+            width:80%;
+            color: white;
+            border:none;
+            border-radius:3px;
+            padding: 10 15 10 15;
+            background-color:rgb(57, 164, 252);
+        }
+        button:hover{
+            cursor: pointer;
+            transition: 0.5s;
+            background-color:rgb(57, 135, 252);
+        }
+        .pbottom{
+            margin-top:5px;
+        }
+    }
+
+    /* for mobiles */
+@media screen and (max-width: 540px) {
+        .container{
+            margin: auto;
+            margin-top: 25vh;
+            width: 100vw;
+            /* border: 1px solid rgb(189, 189, 189); */
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+        }
+        .perror{
+            color:red;
+        }
+        .h1form{
+            margin-top: 25px;
+        }
+        .h1form a {
+            text-decoration:none;
+            color: rgb(32,32,32);
+        }
+        .h1form a:hover{
+            color: rgb(100,100,100);
+        }
+        .pform{
+            margin:10px 0 10px 0;
+            font-size: 20px;
+        }
+        form{
+            margin-top:25px;
+            margin-bottom: 25px;
+        }
+        input{
+            font-size:15px;
+            padding:10 15 10 15;
+            width:80%;
+        }
+        input:focus{
+            outline: none;
+            box-shadow: none;
+        }
+        button{
+            font-size:17px;
+            width:80%;
+            color: white;
+            border:none;
+            border-radius:3px;
+            padding: 10 15 10 15;
+            background-color:rgb(57, 164, 252);
+        }
+        button:hover{
+            cursor: pointer;
+            transition: 0.5s;
+            background-color:rgb(57, 135, 252);
+        }
+        .pbottom{
+            margin-top:5px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="h1form"> <a href="home.html">Crime Portal</a></h1>
+        <p class="pform">User Login</p>
+        <form action="user-login.php" method="POST">
+            <input type="text" placeholder="Username" name="username">
+            <br>
+            <br>
+            <input type="password" placeholder="Password" name="password">
+            <p class="error"></p>
+            <br>
+            <button name="submit">Log in</button>
+            <br>
+            <p class="pbottom">Don't have account?<a href="user-registration.php">Register</a></p>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Crime Reporting in Nepal</title>
+    <link rel="icon" href="parliament.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-image: url("parliament.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.tandm{
+    display: none;
+} 
+
+/* for desktop response */
+@media screen and (min-width: 1025px) {
+    .container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: grid;
+        width: 100vw;
+        grid-template-areas: 'c m m m n'
+            'mid mid mid mid mid';
+    }
+    .desk{
+        display: none;
+    }
+    .tandm{
+        display: block;
+    }
+    .op-b {
+        background-color: black;
+        height: 100vh;
+        opacity: 0.8;
+    }
+
+    .c {
+        grid-area: c;
+    }
+
+    .h1 {
+        padding: 5px;
+        margin-top: 20px;
+        margin-left: 50px;
+    }
+
+    h1 :hover {
+        color: rgb(180, 180, 180);
+        transition: .5s;
+    }
+
+    h1>a {
+        text-decoration: none;
+    }
+
+    .n {
+        grid-area: n;
+        /* width: 20%; */
+    }
+
+    ul {
+        display: inline-flex;
+        list-style: none;
+        margin-right: 50px;
+    }
+
+    li>a {
+        text-decoration: none;
+        color: white;
+        margin-left: 30px;
+        padding-left: 5px;
+    }
+
+    li :hover {
+        color: rgb(180, 180, 180);
+        transition: .5s;
+
+    }
+
+    .m {
+        grid-area: m;
+    }
+
+    .l {
+        grid-area: l;
+    }
+
+    .r {
+        grid-area: r;
+    }
+
+    .d {
+        grid-area: d;
+        padding-top: 20vh;
+    }
+
+    .mid {
+        margin: 0 80 0 80;
+        display: grid;
+        grid-area: mid;
+        margin: 0 20vw 0 20vw;
+        grid-template-areas: 'l d r';
+    }
+
+    button>a {
+        text-decoration: none;
+        color: black;
+    }
+
+    button {
+        padding: 10px 15px 10px 15px;
+        /*top left bottom right*/
+        border-radius: 3px;
+        border: none;
+    }
+
+    button :hover {
+        font-weight: 600;
+        transition: .3s;
+    }
+}
+
+/* for tablet response */
+@media screen and (min-width: 540px) and (max-width: 1025px) {
+    .container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: grid;
+        width: 100vw;
+        grid-template-areas: 'c n'
+            'mid mid';
+    }
+
+    .op-b {
+        background-color: black;
+        height: 100vh;
+        opacity: 0.8;
+    }
+
+    .c {
+        grid-area: c;
+    }
+
+    .h1 {
+        padding: 5px;
+        margin-top: 20px;
+        margin-left: 0px;
+    }
+
+    h1 :hover {
+        color: rgb(180, 180, 180);
+        transition: .5s;
+    }
+
+    h1>a {
+        text-decoration: none;
+    }
+
+    .n {
+        grid-area: n;
+        /* width: 20%; */
+    }
+
+    ul {
+        display: inline-flex;
+        list-style: none;
+        margin-right: 0px;
+    }
+
+    li>a {
+        text-decoration: none;
+        color: white;
+        margin-left: 30px;
+        padding-left: 5px;
+    }
+
+    li :hover {
+        color: rgb(180, 180, 180);
+        transition: .5s;
+
+    }
+
+    .m {
+        grid-area: m;
+    }
+
+    .l {
+        grid-area: l;
+    }
+
+    .r {
+        grid-area: r;
+    }
+
+    .d {
+        grid-area: d;
+        padding-top: 20vh;
+    }
+
+    .mid {
+        margin: 0 80 0 80;
+        display: grid;
+        grid-area: mid;
+        grid-template-areas: 'l d r';
+    }
+
+    button>a {
+        text-decoration: none;
+        color: black;
+    }
+
+    button {
+        padding: 10px 15px 10px 15px;
+        /*top left bottom right*/
+        border-radius: 3px;
+        border: none;
+    }
+
+    button :hover {
+        font-weight: 600;
+        transition: .3s;
+    }
+}
+
+/* for mobiles */
+@media screen and (max-width: 540px) {
+
+    body {
+        background-image: url("parliament.jpg");
+        background-size: cover;
+        width: 100vh;
+    }
+
+    .container {
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: grid;
+        width: 100vw;
+        grid-template-areas: 'c'
+        'n'
+        'mid';
+    }
+
+    .op-b {
+        background-color: black;
+        height: 100vh;
+        opacity: 0.8;
+    }
+
+    .c {
+        grid-area: c;
+    }
+
+    .h1 {
+        padding: 5px;
+        font-size: 15px;
+        margin-top: 20px;
+    }
+
+    h1 :hover {
+        color: rgb(180, 180, 180);
+        transition: .5s;
+    }
+
+    h1>a {
+        text-decoration: none;
+    }
+
+    .n {
+        grid-area: n;
+    }
+
+    ul {
+        display: inline-flex;
+        list-style: none;
+        margin-right: 50px;
+    }
+
+    li>a {
+        text-decoration: none;
+        color: white;
+        margin-left: 30px;
+        padding-left: 5px;
+    }
+
+    li :hover {
+        color: rgb(180, 180, 180);
+        transition: .5s;
+
+    }
+
+    .m {
+        grid-area: m;
+        display: none;
+    }
+
+    .l {
+        grid-area: l;
+    }
+
+    .r {
+        grid-area: r;
+    }
+
+    .d {
+        grid-area: d;
+        padding-top: 150px;
+    }
+
+    .mid {
+        margin: 0 80 0 80;
+        display: grid;
+        grid-area: mid;
+        grid-template-areas: 'l d r';
+    }
+
+    button>a {
+        text-decoration: none;
+        color: black;
+    }
+
+    button {
+        padding: 10px 15px 10px 15px;
+        /*top left bottom right*/
+        border-radius: 3px;
+        border: none;
+    }
+
+    button :hover {
+        font-weight: 600;
+        transition: .3s;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="op-b">
+    </div>
+        <div class="container">
+            <div class="c"><h1 class="h1"><a href="home.html">Crime Portal</a></h1></div>
+            <div class="n">
+                <ul>
+                    <li><a href="user-login.html">User Login</a></li>
+                    <li><a href="admin-login.html">Admin Login</a></li>
+                </ul>
+            </div>
+            <div class="m"></div>
+            <div class="mid">
+                <div class="l"></div>
+                <div class="r"></div>
+                <div class="d">
+                    <h1>Online Crime Reporting in Nepal</h1>
+                    <br>
+                    <p class="tandm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam expedita, fugiat dolore vel nisi quasi voluptatum dolorum pariatur, provident corporis possimus dolorem nulla! Odit eius, facere libero animi delectus totam.
+                    </p>
+                    <p class="des">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde ratione fuga, tempora quod eveniet eos itaque cumque molestiae voluptate quas? Soluta repudiandae impedit natus error temporibus debitis officiis asperiores ipsum.
+                        Similique aut a rem molestiae, possimus sit labore vitae, dolore quam doloremque beatae, libero dolorem iusto debitis dignissimos non ipsam! Consequatur architecto facilis beatae ut iure in deleniti dolore quo.
+                        Numquam expedita aut harum, pariatur temporibus, deleniti distinctio blanditiis sit nulla ex, voluptatibus culpa suscipit. Veritatis, adipisci, cupiditate cumque deleniti necessitatibus atque praesentium ex harum doloremque eligendi omnis alias fuga.
+                        Minima, accusantium optio, fugit cupiditate fugiat, cum ratione facilis aperiam ab sequi quisquam? Est mollitia neque corporis cumque aliquam laboriosam saepe aperiam, quos nobis ad reprehenderit soluta facere culpa qui!
+                        Aperiam nulla dolorem sed incidunt esse? Ullam odio temporibus adipisci voluptas rerum animi quia est rem! Dolores, alias voluptates ex cumque repellat ab, sequi explicabo voluptate adipisci hic, ratione excepturi.
+                    </p>
+                        <br><br>
+                        <button><a href="user-login.html" class="report">Report Crime</a></button>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

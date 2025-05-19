@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    margin: auto;
+    width: 60%;
+    border: 0.5px solid rgb(57, 135, 252);
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+.h3form{
+    margin-top: 25px;
+}
